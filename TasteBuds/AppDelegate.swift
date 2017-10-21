@@ -8,11 +8,16 @@
 
 import UIKit
 import CoreData
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+  
+  private func application(_ application: UIApplication, openURL: URL, sourceApplication: NSString, annotation: Any) -> Bool {
+    return FBSDKApplicationDelegate.sharedInstance().application(application, open: openURL as URL!, sourceApplication: sourceApplication as String!, annotation: annotation)
+  }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

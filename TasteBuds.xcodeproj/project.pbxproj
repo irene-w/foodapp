@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234B79B61F9AE097003A92BA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B79BA1F9AE097003A92BA /* Bolts.framework */; };
+		234B79B71F9AE097003A92BA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B79BB1F9AE097003A92BA /* FBSDKCoreKit.framework */; };
+		234B79B81F9AE097003A92BA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B79BC1F9AE097003A92BA /* FBSDKLoginKit.framework */; };
+		234B79B91F9AE097003A92BA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B79BD1F9AE097003A92BA /* FBSDKShareKit.framework */; };
 		37700C926B659B5DB9FC7CC5 /* Pods_TasteBuds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */; };
 		57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D341F9AD36800A8E56C /* AppDelegate.swift */; };
 		57304D371F9AD36800A8E56C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D361F9AD36800A8E56C /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		234B79B51F9AD94B003A92BA /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		234B79BA1F9AE097003A92BA /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234B79BB1F9AE097003A92BA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234B79BC1F9AE097003A92BA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234B79BD1F9AE097003A92BA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D341F9AD36800A8E56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57304D361F9AD36800A8E56C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +44,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234B79B61F9AE097003A92BA /* Bolts.framework in Frameworks */,
+				234B79B71F9AE097003A92BA /* FBSDKCoreKit.framework in Frameworks */,
+				234B79B81F9AE097003A92BA /* FBSDKLoginKit.framework in Frameworks */,
+				234B79B91F9AE097003A92BA /* FBSDKShareKit.framework in Frameworks */,
 				37700C926B659B5DB9FC7CC5 /* Pods_TasteBuds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +90,10 @@
 		60CFE451297A04274FCFE83A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				234B79BA1F9AE097003A92BA /* Bolts.framework */,
+				234B79BB1F9AE097003A92BA /* FBSDKCoreKit.framework */,
+				234B79BC1F9AE097003A92BA /* FBSDKLoginKit.framework */,
+				234B79BD1F9AE097003A92BA /* FBSDKShareKit.framework */,
 				D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */,
 			);
 			name = Frameworks;
