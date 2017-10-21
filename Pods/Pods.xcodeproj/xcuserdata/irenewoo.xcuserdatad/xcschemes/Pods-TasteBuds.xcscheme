@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "252D0FA0029D1FCDC87EE83373B1DBD7"
+               BlueprintIdentifier = "C210064BCB83ABA33F0EEBAF65AE339F"
                BuildableName = "Pods_TasteBuds.framework"
                BlueprintName = "Pods-TasteBuds"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "252D0FA0029D1FCDC87EE83373B1DBD7"
+            BlueprintIdentifier = "C210064BCB83ABA33F0EEBAF65AE339F"
             BuildableName = "Pods_TasteBuds.framework"
             BlueprintName = "Pods-TasteBuds"
             ReferencedContainer = "container:Pods.xcodeproj">
