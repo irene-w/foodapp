@@ -17,8 +17,14 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getPicture()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getPicture()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,23 +33,18 @@ class ProfileViewController: UIViewController {
     }
     
     func getPicture() {
-        let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, email, picture.type(large)"])
-        let _ = request?.start(completionHandler: { (connection, result, error) in
-            guard let userInfo = result as? [String: Any] else { return } //handle the error
-            
-            //The url is nested 3 layers deep into the result so it's pretty messy
-            if let imageURL = ((userInfo["picture"] as? [String: Any])?["data"] as? [String: Any])?["url"] as? String {
-                //Download image from imageURL
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start(completionHandler: {
+            (connection, result, err) -> Void in
+            if let fbInfo = result as? [String:String] {
+                let picURL = "http://graph.facebook.com/\(fbInfo["id"]!)/picture?type=large"
                 let downloader = ImageDownloader()
-                let urlRequest = URLRequest(url: URL(string: imageURL)!)
+                let urlRequest = URLRequest(url: URL(string: picURL)!)
                 
                 downloader.download(urlRequest) { response in
-                    
                     if let image = response.result.value {
                         self.profilePicture.image = image
                     }
                 }
-                
             }
         })
     }
