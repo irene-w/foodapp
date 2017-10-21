@@ -13,16 +13,11 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "NewsFeed"
+        //navigationController?.title = "NewsFeed"
         feedTableView.dataSource = self
         feedTableView.delegate = self
         feedTableView.rowHeight = 236
-        
-        //tabBarItem.image = #imageLiteral(resourceName: "activity")
-        //tabBarItem.title = ""
-        
-        //tabBarController?.tabBar.items?.insert(UITabBarItem(title: "", image: #imageLiteral(resourceName: "pin"), tag: 0), at: 0)
-        //tabBarController?.tabBar.items?.append(UITabBarItem(title: "", image: #imageLiteral(resourceName: "profile"), tag: 0))
+        feedTableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

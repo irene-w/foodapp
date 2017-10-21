@@ -24,14 +24,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         if (FBSDKAccessToken.current()) != nil {
-            //go to next view controller (news feed)
-            let storyboard = UIStoryboard(name: "NewsFeed", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "NewsFeed")
+            //Go to News Feed
+            let vc = MainTabBarViewController()
             present(vc, animated: true, completion: nil)
         }
-        
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {

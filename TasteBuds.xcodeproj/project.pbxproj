@@ -19,6 +19,7 @@
 		2397F3BF1F9BFDEB00AA8162 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397F3BE1F9BFDEB00AA8162 /* User.swift */; };
 		37700C926B659B5DB9FC7CC5 /* Pods_TasteBuds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */; };
 		570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */; };
+		570907EE1F9C081A00EC6660 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570907ED1F9C081A00EC6660 /* MainTabBarViewController.swift */; };
 		57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D341F9AD36800A8E56C /* AppDelegate.swift */; };
 		57304D371F9AD36800A8E56C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D361F9AD36800A8E56C /* ViewController.swift */; };
 		57304D3A1F9AD36800A8E56C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57304D381F9AD36800A8E56C /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		234B79C21F9BAD64003A92BA /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = TasteBuds/CheckInViewController.swift; sourceTree = SOURCE_ROOT; };
 		2397F3BE1F9BFDEB00AA8162 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
+		570907ED1F9C081A00EC6660 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D341F9AD36800A8E56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57304D361F9AD36800A8E56C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		57304D331F9AD36800A8E56C /* TasteBuds */ = {
 			isa = PBXGroup;
 			children = (
+				570907ED1F9C081A00EC6660 /* MainTabBarViewController.swift */,
 				57A9BDB31F9AE43E00D3B131 /* Maps */,
 				57A9BDB21F9AE40800D3B131 /* Profile */,
 				57A9BDB11F9AE3E900D3B131 /* NewFeed */,
@@ -337,6 +340,7 @@
 			files = (
 				234B79C11F9AE8D4003A92BA /* ProfileViewController.swift in Sources */,
 				57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */,
+				570907EE1F9C081A00EC6660 /* MainTabBarViewController.swift in Sources */,
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
 				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,

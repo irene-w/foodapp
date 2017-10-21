@@ -12,7 +12,7 @@
 		<key>AlamofireImage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
@@ -41,6 +41,11 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
+		</dict>
+		<key>OHMySQL.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>Pods-TasteBuds.xcscheme</key>
 		<dict>
