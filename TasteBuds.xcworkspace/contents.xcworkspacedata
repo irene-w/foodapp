@@ -2,13 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Base.lproj/Package.swift">
-   </FileRef>
-   <Group
-      location = "container:"
-      name = "Login">
-   </Group>
-   <FileRef
       location = "group:TasteBuds.xcodeproj">
    </FileRef>
    <FileRef

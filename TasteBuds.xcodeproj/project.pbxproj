@@ -30,6 +30,19 @@
 		57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		23F8C3F01F9BE46100610036 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		234B79B51F9AD94B003A92BA /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		234B79BA1F9AE097003A92BA /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,14 +52,6 @@
 		234B79BE1F9AE8B1003A92BA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = TasteBuds/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = TasteBuds/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		234B79C21F9BAD64003A92BA /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = TasteBuds/CheckInViewController.swift; sourceTree = SOURCE_ROOT; };
-<<<<<<< HEAD
-=======
-		234B79C61F9BCDBF003A92BA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
->>>>>>> 0d2b96afd05ff8c6c8c2e1c2971cfdfc293910dd
-=======
-		234B79C81F9BD753003A92BA /* CheckIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CheckIn.storyboard; path = TasteBuds/CheckIn.storyboard; sourceTree = SOURCE_ROOT; };
->>>>>>> 1f8749ed2d73ae2d183840d950cbfa57d4267b5c
 		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D341F9AD36800A8E56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +196,7 @@
 				57304D2F1F9AD36800A8E56C /* Resources */,
 				7194D985661F04E5B4823218 /* [CP] Embed Pods Frameworks */,
 				22253BB92F85ACF2F0535434 /* [CP] Copy Pods Resources */,
+				23F8C3F01F9BE46100610036 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
