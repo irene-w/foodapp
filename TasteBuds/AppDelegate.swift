@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
   
-  func application(_ application: UIApplication, open: URL, sourceApplication: NSString, annotation: Any) -> Bool {
+    func application(_ application: UIApplication, open: URL, sourceApplication: String?, annotation: Any) -> Bool {
     return FBSDKApplicationDelegate.sharedInstance().application(application, open: open as URL!, sourceApplication: sourceApplication as String!, annotation: annotation)
   }
 
