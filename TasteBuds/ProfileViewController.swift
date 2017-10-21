@@ -37,18 +37,19 @@ class ProfileViewController: UIViewController {
             (connection, result, err) -> Void in
             if let fbInfo = result as? [String:String] {
                 let picURL = "http://graph.facebook.com/\(fbInfo["id"]!)/picture?type=large"
-                if let url = URL(string: (picURL)) {
-                    DispatchQueue.global(qos: .default).async {
-                        [weak self] in
-                        if let imageData = NSData(contentsOf: url) {
-                            DispatchQueue.main.async {
-                                self?.profilePicture.image = UIImage(data: imageData as Data)
-                            }
-                        }
+                let downloader = ImageDownloader()
+                let urlRequest = URLRequest(url: URL(string: picURL)!)
+                
+                downloader.download(urlRequest) { response in
+                    print(response.request)
+                    print(response.response)
+                    debugPrint(response.result)
+                    
+                    if let image = response.result.value {
+                        self.profilePicture.image = image
                     }
-                } else {
-                    print("invalid profile pic url")
                 }
+
             }
         })
     }
