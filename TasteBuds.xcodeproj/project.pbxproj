@@ -18,6 +18,10 @@
 		57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57304D3B1F9AD36800A8E56C /* TasteBuds.xcdatamodeld */; };
 		57304D3F1F9AD36800A8E56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57304D3E1F9AD36800A8E56C /* Assets.xcassets */; };
 		57304D421F9AD36800A8E56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57304D401F9AD36800A8E56C /* LaunchScreen.storyboard */; };
+		57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */; };
+		57A9BDB71F9AE4A800D3B131 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */; };
+		57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9BDB91F9AE4C600D3B131 /* MapsViewController.swift */; };
+		57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		57304D3E1F9AD36800A8E56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57304D411F9AD36800A8E56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57304D431F9AD36800A8E56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
+		57A9BDB91F9AE4C600D3B131 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
 		86F6BCD095B7EAF22413F24F /* Pods-TasteBuds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteBuds.release.xcconfig"; path = "Pods/Target Support Files/Pods-TasteBuds/Pods-TasteBuds.release.xcconfig"; sourceTree = "<group>"; };
 		8D3891B961E07B7C9F04816D /* Pods-TasteBuds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteBuds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TasteBuds/Pods-TasteBuds.debug.xcconfig"; sourceTree = "<group>"; };
 		D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TasteBuds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,15 +84,52 @@
 		57304D331F9AD36800A8E56C /* TasteBuds */ = {
 			isa = PBXGroup;
 			children = (
+				57A9BDB31F9AE43E00D3B131 /* Maps */,
+				57A9BDB21F9AE40800D3B131 /* Profile */,
+				57A9BDB11F9AE3E900D3B131 /* NewFeed */,
+				57A9BDB01F9AE39B00D3B131 /* Login */,
 				57304D341F9AD36800A8E56C /* AppDelegate.swift */,
-				57304D361F9AD36800A8E56C /* ViewController.swift */,
-				57304D381F9AD36800A8E56C /* Main.storyboard */,
 				57304D3E1F9AD36800A8E56C /* Assets.xcassets */,
 				57304D401F9AD36800A8E56C /* LaunchScreen.storyboard */,
 				57304D431F9AD36800A8E56C /* Info.plist */,
 				57304D3B1F9AD36800A8E56C /* TasteBuds.xcdatamodeld */,
 			);
 			path = TasteBuds;
+			sourceTree = "<group>";
+		};
+		57A9BDB01F9AE39B00D3B131 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				57304D361F9AD36800A8E56C /* ViewController.swift */,
+				57304D381F9AD36800A8E56C /* Main.storyboard */,
+			);
+			name = Login;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		57A9BDB11F9AE3E900D3B131 /* NewFeed */ = {
+			isa = PBXGroup;
+			children = (
+				57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */,
+				57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */,
+			);
+			path = NewFeed;
+			sourceTree = "<group>";
+		};
+		57A9BDB21F9AE40800D3B131 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		57A9BDB31F9AE43E00D3B131 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				57A9BDB91F9AE4C600D3B131 /* MapsViewController.swift */,
+				57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */,
+			);
+			path = Maps;
 			sourceTree = "<group>";
 		};
 		60CFE451297A04274FCFE83A /* Frameworks */ = {
@@ -173,7 +218,9 @@
 			files = (
 				57304D421F9AD36800A8E56C /* LaunchScreen.storyboard in Resources */,
 				57304D3F1F9AD36800A8E56C /* Assets.xcassets in Resources */,
+				57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */,
 				57304D3A1F9AD36800A8E56C /* Main.storyboard in Resources */,
+				57A9BDB71F9AE4A800D3B131 /* NewsFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */,
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
 				57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */,
+				57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
