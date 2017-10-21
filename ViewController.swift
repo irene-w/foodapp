@@ -17,6 +17,13 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.center = view.center
         loginButton.delegate = self // Remember to set the delegate of the loginButton
         view.addSubview(loginButton)
+        
+        if ((FBSDKAccessToken.current()) != nil) {
+            //go to next view controller (news feed)
+            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+            present(vc, animated: true, completion: nil)
+        }
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
@@ -31,7 +38,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let token = FBSDKAccessToken.current() {
+        if (FBSDKAccessToken.current()) != nil {
             //go to next view controller (news feed)
             let storyboard = UIStoryboard(name: "Profile", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
