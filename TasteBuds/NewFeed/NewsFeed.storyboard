@@ -5,14 +5,33 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DzR-r8-vF4">
+            <objects>
+                <tabBarController storyboardIdentifier="NewsFeed" id="i0o-OH-U7L" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vqk-oL-TvJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8tW-YA-awe" kind="relationship" relationship="viewControllers" id="M93-18-eoZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5p-9y-Cf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2468" y="139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="b2v-wr-bO8">
             <objects>
                 <navigationController id="8tW-YA-awe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" selectedImage="activity" id="wXn-Zt-g5a"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oXq-dY-tlz">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,66 +42,98 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBc-6C-Lai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1764" y="139"/>
+            <point key="canvasLocation" x="-1716" y="139"/>
         </scene>
         <!--News Feed View Controller-->
         <scene sceneID="0f4-Oy-gbh">
             <objects>
-                <viewController storyboardIdentifier="NewsFeed" id="nYd-lT-qb1" customClass="NewsFeedViewController" customModule="TasteBuds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nYd-lT-qb1" customClass="NewsFeedViewController" customModule="TasteBuds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Prn-xj-LHc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q9K-50-rpY">
-                                <rect key="frame" x="0.0" y="91" width="375" height="576"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsFeedPost" rowHeight="517" id="Evs-HM-SiB" customClass="NewsFeedTableViewCell" customModule="TasteBuds" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="517"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsFeedPost" rowHeight="224" id="Evs-HM-SiB" customClass="NewsFeedTableViewCell" customModule="TasteBuds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Evs-HM-SiB" id="4p4-3W-9h2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="516.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="223.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U34-EK-hbb">
-                                                    <rect key="frame" x="8" y="8" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="U34-EK-hbb">
+                                                    <rect key="frame" x="13" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="ZZf-WP-pyN"/>
+                                                        <constraint firstAttribute="height" constant="50" id="qb1-0O-iZA"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Donald had lunch at " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-3s-Jfl">
-                                                    <rect key="frame" x="56" y="8" width="158" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WP9-bJ-Oiq">
+                                                    <rect key="frame" x="70" y="8" width="118.5" height="18"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donald Perry " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dv-3s-Jfl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="97" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                            <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1Z-3T-gOw">
+                                                            <rect key="frame" x="97" y="0.0" width="21.5" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Torchy's Tacos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agp-Kh-7RZ">
+                                                    <rect key="frame" x="193.5" y="8" width="106" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Torchy's Tacos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agp-Kh-7RZ">
-                                                    <rect key="frame" x="199" y="8" width="151" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffN-zC-JKl">
-                                                    <rect key="frame" x="0.0" y="65" width="375" height="375"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-Ph-buf">
-                                                    <rect key="frame" x="56" y="27" width="91" height="21"/>
+                                                    <rect key="frame" x="298" y="27" width="69" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" red="0.54509803921568623" green="0.54509803921568623" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="omg the tacos are soooo good!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-j7-x5f">
-                                                    <rect key="frame" x="22" y="448" width="353" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO3-ZG-GiP">
+                                                    <rect key="frame" x="70" y="30" width="78" height="28"/>
+                                                    <color key="backgroundColor" red="0.19215686274509802" green="0.81960784313725488" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <state key="normal" title="Worth it!">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="ffN-zC-JKl">
+                                                    <rect key="frame" x="70" y="68" width="220" height="147"/>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="agp-Kh-7RZ" firstAttribute="top" secondItem="WP9-bJ-Oiq" secondAttribute="top" id="3Lu-cG-i4e"/>
+                                                <constraint firstItem="fO3-ZG-GiP" firstAttribute="bottom" secondItem="U34-EK-hbb" secondAttribute="bottom" id="3Uy-ff-7BL"/>
+                                                <constraint firstItem="WP9-bJ-Oiq" firstAttribute="top" secondItem="U34-EK-hbb" secondAttribute="top" id="5UC-Pd-mpL"/>
+                                                <constraint firstItem="fO3-ZG-GiP" firstAttribute="leading" secondItem="WP9-bJ-Oiq" secondAttribute="leading" id="78T-So-Shc"/>
+                                                <constraint firstItem="agp-Kh-7RZ" firstAttribute="bottom" secondItem="WP9-bJ-Oiq" secondAttribute="bottom" id="9yH-xS-fbs"/>
+                                                <constraint firstItem="ffN-zC-JKl" firstAttribute="leading" secondItem="fO3-ZG-GiP" secondAttribute="leading" id="M8N-mI-XeJ"/>
+                                                <constraint firstItem="U34-EK-hbb" firstAttribute="leading" secondItem="4p4-3W-9h2" secondAttribute="leadingMargin" constant="5" id="NUt-ke-KuP"/>
+                                                <constraint firstItem="WP9-bJ-Oiq" firstAttribute="leading" secondItem="U34-EK-hbb" secondAttribute="trailing" constant="7" id="Qrc-RF-gG5"/>
+                                                <constraint firstItem="ffN-zC-JKl" firstAttribute="top" secondItem="fO3-ZG-GiP" secondAttribute="bottom" constant="10" id="r4w-7p-div"/>
+                                                <constraint firstItem="agp-Kh-7RZ" firstAttribute="leading" secondItem="WP9-bJ-Oiq" secondAttribute="trailing" constant="5" id="wzQ-Ii-FVL"/>
+                                                <constraint firstItem="U34-EK-hbb" firstAttribute="top" secondItem="4p4-3W-9h2" secondAttribute="topMargin" id="xmD-Dz-Zbz"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodPic" destination="ffN-zC-JKl" id="TAP-Gw-jb6"/>
+                                            <outlet property="name" destination="2dv-3s-Jfl" id="5QI-7I-S1A"/>
+                                            <outlet property="profilePic" destination="U34-EK-hbb" id="NH3-8c-lov"/>
+                                            <outlet property="restaurant" destination="agp-Kh-7RZ" id="5lc-fS-3p4"/>
+                                            <outlet property="worthIt" destination="fO3-ZG-GiP" id="Stl-oy-D2c"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -100,4 +151,9 @@
             <point key="canvasLocation" x="-978.39999999999998" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="activity" width="34" height="26"/>
+        <image name="food" width="220" height="147"/>
+        <image name="profilePic" width="158" height="158"/>
+    </resources>
 </document>
