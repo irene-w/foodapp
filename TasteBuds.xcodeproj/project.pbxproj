@@ -12,6 +12,7 @@
 		234B79B81F9AE097003A92BA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B79BC1F9AE097003A92BA /* FBSDKLoginKit.framework */; };
 		234B79B91F9AE097003A92BA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234B79BD1F9AE097003A92BA /* FBSDKShareKit.framework */; };
 		37700C926B659B5DB9FC7CC5 /* Pods_TasteBuds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */; };
+		570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */; };
 		57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D341F9AD36800A8E56C /* AppDelegate.swift */; };
 		57304D371F9AD36800A8E56C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D361F9AD36800A8E56C /* ViewController.swift */; };
 		57304D3A1F9AD36800A8E56C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57304D381F9AD36800A8E56C /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		234B79BB1F9AE097003A92BA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234B79BC1F9AE097003A92BA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234B79BD1F9AE097003A92BA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D341F9AD36800A8E56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57304D361F9AD36800A8E56C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */,
 				57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */,
+				570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */,
 			);
 			path = NewFeed;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			files = (
 				57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */,
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
+				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
 				57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */,
 				57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */,

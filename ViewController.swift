@@ -16,7 +16,6 @@ class ViewController: UIViewController {
         var loginButton = FBSDKLoginButton.init()
         loginButton.center = self.view.center
         self.view.addSubview(loginButton)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
