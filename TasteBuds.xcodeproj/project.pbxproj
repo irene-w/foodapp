@@ -14,6 +14,7 @@
 		234B79BF1F9AE8B1003A92BA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234B79BE1F9AE8B1003A92BA /* Profile.storyboard */; };
 		234B79C11F9AE8D4003A92BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */; };
 		234B79C31F9BAD64003A92BA /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B79C21F9BAD64003A92BA /* CheckInViewController.swift */; };
+		234B79C71F9BCDBF003A92BA /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B79C61F9BCDBF003A92BA /* UIImageViewExtension.swift */; };
 		37700C926B659B5DB9FC7CC5 /* Pods_TasteBuds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */; };
 		570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */; };
 		57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D341F9AD36800A8E56C /* AppDelegate.swift */; };
@@ -37,6 +38,10 @@
 		234B79BE1F9AE8B1003A92BA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = TasteBuds/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = TasteBuds/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		234B79C21F9BAD64003A92BA /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = TasteBuds/CheckInViewController.swift; sourceTree = SOURCE_ROOT; };
+<<<<<<< HEAD
+=======
+		234B79C61F9BCDBF003A92BA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+>>>>>>> 0d2b96afd05ff8c6c8c2e1c2971cfdfc293910dd
 		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D341F9AD36800A8E56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 				57304D401F9AD36800A8E56C /* LaunchScreen.storyboard */,
 				57304D431F9AD36800A8E56C /* Info.plist */,
 				57304D3B1F9AD36800A8E56C /* TasteBuds.xcdatamodeld */,
+				234B79C61F9BCDBF003A92BA /* UIImageViewExtension.swift */,
 			);
 			path = TasteBuds;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
 				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
+				234B79C71F9BCDBF003A92BA /* UIImageViewExtension.swift in Sources */,
 				57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */,
 				57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */,
 				234B79C31F9BAD64003A92BA /* CheckInViewController.swift in Sources */,
