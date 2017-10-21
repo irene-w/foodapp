@@ -20,8 +20,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        let storyboard = UIStoryboard(name: "NewsFeed", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "NewsFeed")
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
         present(vc, animated: true, completion: nil)
     }
     
@@ -33,8 +33,8 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidAppear(animated)
         if let token = FBSDKAccessToken.current() {
             //go to next view controller (news feed)
-            let storyboard = UIStoryboard(name: "NewsFeed", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "NewsFeed")
+            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
             present(vc, animated: true, completion: nil)
         }
     }
