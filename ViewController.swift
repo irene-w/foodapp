@@ -13,12 +13,24 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // If user already logged in, don't add the login button
+        if (FBSDKAccessToken.current()) != nil {
+            //go to next view controller (news feed)
+            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+            present(vc, animated: true, completion: nil)
+        }
+        
         let loginButton = FBSDKLoginButton()
         loginButton.center = view.center
         loginButton.delegate = self // Remember to set the delegate of the loginButton
         view.addSubview(loginButton)
-        
-        if ((FBSDKAccessToken.current()) != nil) {
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (FBSDKAccessToken.current()) != nil {
             //go to next view controller (news feed)
             let storyboard = UIStoryboard(name: "Profile", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
@@ -35,20 +47,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         // Actions for when the user logged out goes here
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if (FBSDKAccessToken.current()) != nil {
-            //go to next view controller (news feed)
-            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
-            present(vc, animated: true, completion: nil)
-        }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
