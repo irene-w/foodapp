@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
         FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start(completionHandler: {
             (connection, result, err) -> Void in
             if let fbInfo = result as? [String:String] {
-                userName.text = fbInfo["name"]!
+                self.userName.text = fbInfo["name"]!
                 let picURL = "http://graph.facebook.com/\(fbInfo["id"]!)/picture?type=large"
                 
                 if let url = URL(string: (picURL)) {
