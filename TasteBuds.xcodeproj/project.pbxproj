@@ -52,8 +52,6 @@
 		234B79BE1F9AE8B1003A92BA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = TasteBuds/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = TasteBuds/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		234B79C21F9BAD64003A92BA /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = TasteBuds/CheckInViewController.swift; sourceTree = SOURCE_ROOT; };
-		234B79C61F9BCDBF003A92BA /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-		234B79C81F9BD753003A92BA /* CheckIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CheckIn.storyboard; path = TasteBuds/CheckIn.storyboard; sourceTree = SOURCE_ROOT; };
 		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D341F9AD36800A8E56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
