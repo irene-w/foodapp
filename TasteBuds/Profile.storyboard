@@ -28,6 +28,9 @@
                                 <rect key="frame" x="290" y="20" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Check In"/>
+                                <connections>
+                                    <action selector="addEntry:" destination="0AZ-uZ-Feu" eventType="touchUpInside" id="crG-Qi-KLT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xie-5n-3JS">
                                 <rect key="frame" x="16" y="61" width="121" height="120"/>
