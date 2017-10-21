@@ -30,6 +30,19 @@
 		57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		23F8C3F01F9BE46100610036 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		234B79B51F9AD94B003A92BA /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		234B79BA1F9AE097003A92BA /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +198,7 @@
 				57304D2F1F9AD36800A8E56C /* Resources */,
 				7194D985661F04E5B4823218 /* [CP] Embed Pods Frameworks */,
 				22253BB92F85ACF2F0535434 /* [CP] Copy Pods Resources */,
+				23F8C3F01F9BE46100610036 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
