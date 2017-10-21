@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GMSPlacesClient.provideAPIKey("AIzaSyBON8odrfJITwM47-G3QvyF5xHtk-6lcyE")
         GMSServices.provideAPIKey("AIzaSyBON8odrfJITwM47-G3QvyF5xHtk-6lcyE")
+
         return true
     }
 

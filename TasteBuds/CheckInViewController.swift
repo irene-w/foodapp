@@ -7,14 +7,21 @@
 //
 
 import UIKit
-import PostgreSQL
-
+import OHMySQL
 
 class CheckInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Open connection to database
+        let user = OHMySQLUser(userName: "root", password: "deirclam2017", serverName: "localhost", dbName: "tastebuds_db", port: 3306, socket: "/Applications/MAMP/tmp/mysql/mysql.sock")
+        let coordinator = OHMySQLStoreCoordinator(user: user!)
+        coordinator.encoding = .UTF8MB4
+        coordinator.connect()
 
+        
+        
         // Do any additional setup after loading the view.
     }
 
