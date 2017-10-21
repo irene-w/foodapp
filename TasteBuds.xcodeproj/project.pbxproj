@@ -34,10 +34,10 @@
 		234B79BB1F9AE097003A92BA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234B79BC1F9AE097003A92BA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		234B79BD1F9AE097003A92BA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		234B79BE1F9AE8B1003A92BA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = TasteBuds/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = TasteBuds/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		234B79C21F9BAD64003A92BA /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = TasteBuds/CheckInViewController.swift; sourceTree = SOURCE_ROOT; };
+		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57304D341F9AD36800A8E56C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57304D361F9AD36800A8E56C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
