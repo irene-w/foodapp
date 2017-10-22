@@ -12,11 +12,7 @@ import UIKit
 
     //MARK: Properties
     private var ratingButtons = [UIButton]()
-    var rating = 0 {
-        didSet {
-            updateButtonSelectionStates()
-        }
-    }
+    var rating = 0
     @IBInspectable var buttonSize: CGSize = CGSize(width: 130.0, height: 50.0) {
         didSet {
             setupButtons()
@@ -54,19 +50,20 @@ import UIKit
         let kindaWorth = UIImage(named: "kindaWorthIt", in: bundle, compatibleWith: self.traitCollection)
         let notWorth = UIImage(named: "notWorthIt", in: bundle, compatibleWith: self.traitCollection)
         
-        addButton(image: notWorth!)
-        addButton(image: kindaWorth!)
-        addButton(image: totallyWorth!)
-        
-        updateButtonSelectionStates()
+        addButton(image: notWorth!, tag: 1)
+        addButton(image: kindaWorth!, tag: 2)
+        addButton(image: totallyWorth!, tag: 3)
+
     }
     
-    func addButton(image: UIImage) {
+    func addButton(image: UIImage, tag: Int) {
         // Create button
         let button = UIButton()
         
         // Set the button images
         button.setImage(image, for: .normal)
+        
+        button.tag = tag
         
         // Add constraints
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -85,6 +82,8 @@ import UIKit
     
     // Set the rating: 1 for not worth it, 2 kinda worth, 3 worth it
     @objc func ratingButtonTapped(button: UIButton) {
+        button.alpha = 1.0
+        
         guard let index = ratingButtons.index(of: button) else {
             fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
         }
@@ -101,14 +100,11 @@ import UIKit
             // Otherwise set the rating to the selected star
             rating = selectedRating
         }
-    }
-    
-    private func updateButtonSelectionStates() {
-        for (index, button) in ratingButtons.enumerated() {
-            
-            // If the index of a button is not equal to the rating, set to unselected
-            button.isSelected = (index == rating)
-            
+        
+        for unselectedButton in ratingButtons {
+            if (button.tag != unselectedButton.tag) {
+                unselectedButton.alpha = 0.5
+            }
         }
     }
 
