@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MapsViewController: NavBarExtension {
 
+    @IBOutlet weak var mapView: GMSMapView!
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
-        // Do any additional setup after loading the view.
+        
+        // Setup the map
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +38,23 @@ class MapsViewController: NavBarExtension {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension MapsViewController: CLLocationManagerDelegate {
+
+    func locationManager(_manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.startUpdatingLocation()
+            mapView.isMyLocationEnabled = true
+            mapView.settings.myLocationButton = true
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+            locationManager.stopUpdatingLocation()
+        }
+        
+    }
 }

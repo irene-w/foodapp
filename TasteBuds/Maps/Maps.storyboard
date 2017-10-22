@@ -32,10 +32,25 @@
                     <view key="view" contentMode="scaleToFill" id="CdD-oz-c2z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUU-vn-9jO" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZUU-vn-9jO" firstAttribute="leading" secondItem="RET-TP-XDh" secondAttribute="leading" id="0I2-VL-WM8"/>
+                            <constraint firstItem="ZUU-vn-9jO" firstAttribute="bottom" secondItem="RET-TP-XDh" secondAttribute="bottom" id="M0x-cY-BKZ"/>
+                            <constraint firstItem="ZUU-vn-9jO" firstAttribute="trailing" secondItem="RET-TP-XDh" secondAttribute="trailing" id="XUg-e5-ja9"/>
+                            <constraint firstItem="ZUU-vn-9jO" firstAttribute="top" secondItem="RET-TP-XDh" secondAttribute="top" id="mYs-uI-BTQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RET-TP-XDh"/>
                     </view>
                     <navigationItem key="navigationItem" id="4ZG-92-pcF"/>
+                    <connections>
+                        <outlet property="mapView" destination="ZUU-vn-9jO" id="Wyv-NN-0TA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcy-UL-oPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
