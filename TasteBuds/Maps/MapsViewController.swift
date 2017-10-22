@@ -39,7 +39,7 @@ class MapsViewController: NavBarExtension {
         // Add the map to the view, hide it until we've got a location update.
         view.addSubview(mapView)
         mapView.isHidden = true
-        
+        //mapView.frame.size.height = mapView.frame.size.height - 20
     }
 
     override func didReceiveMemoryWarning() {

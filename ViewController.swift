@@ -15,9 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var login: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // If user already logged in, don't add the login button
+        BackEnd.initialize()
         configureButton()
-
     }
     
     func configureButton() {

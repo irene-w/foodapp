@@ -16,16 +16,15 @@ class BackEnd {
     static var ref: DatabaseReference!
     static var user: User!
     
+    static func initialize() {
+        BackEnd.ref = Database.database().reference()
+    }
     static func login(fromViewController vc: UIViewController) {
         FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: vc) { (result, err) in
             if err != nil { print("FB login failed with error: ", err ?? ""); return }
             guard let accessToken = FBSDKAccessToken.current()?.tokenString else {print("Facebook accessToken is nil"); return }
-            //self?.loginPageDelegate.finishedLogin()
             let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
-            //let credential = FBSDKAccessToken.current()
-            
             //sign in with firebase
-            
             Auth.auth().signIn(with: credential) { (user, err) in
                 if err != nil {print("\ncould not authenticate firebase fb signin",err ?? ""); return }
                 print("Firebase user ID is ",Auth.auth().currentUser?.uid ?? "error with firebase login ID in LoadRequest.login()")
