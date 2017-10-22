@@ -18,6 +18,9 @@ class MapsViewController: NavBarExtension {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.edgesForExtendedLayout = []
+        
         configureNavBar()
         
         // Setup the map
@@ -34,9 +37,10 @@ class MapsViewController: NavBarExtension {
         mapView = GMSMapView.map(withFrame: view.bounds, camera: camera)
         mapView.settings.myLocationButton = true
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        //mapView.isMyLocationEnabled = true
+        mapView.isMyLocationEnabled = true
         
         // Add the map to the view, hide it until we've got a location update.
+        
         view.addSubview(mapView)
         mapView.isHidden = true
         
