@@ -7,22 +7,25 @@
 //
 
 import UIKit
-import OHMySQL
+import Firebase
+import FirebaseDatabase
 
-class CheckInViewController: UIViewController {
+class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    
+    @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var restaurantNameEntry: UITextField!
+    @IBOutlet weak var foodPicture: UIImageView!
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Open connection to database
-        let user = OHMySQLUser(userName: "root", password: "deirclam2017", serverName: "localhost", dbName: "tastebuds_db", port: 3306, socket: "/Applications/MAMP/tmp/mysql/mysql.sock")
-        let coordinator = OHMySQLStoreCoordinator(user: user!)
-        coordinator.encoding = .UTF8MB4
-        coordinator.connect()
-
-        
-        
         // Do any additional setup after loading the view.
+        
+        // Access the database
+        ref = Database.database().reference()
+        
+        restaurantNameEntry.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +33,61 @@ class CheckInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        restaurantName.text = textField.text
+    }
+    
+    //MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        // Dismiss the picker if the user cancelled
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        // The image dictionary may contain multiple representations of the image. You want to use the original.
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        
+        // Set photoImageView to display the selected image
+        foodPicture.image = selectedImage
+        
+        // Dismiss the picker
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        
+        // Hide the keyboard
+        restaurantName.resignFirstResponder()
+        
+        // UIImagePickerController is a view controller that lets a user pick media from their photo library
+        let imagePickerController = UIImagePickerController()
+        
+        // Only allow photos to be picked, not taken
+        imagePickerController.sourceType = .photoLibrary
+        
+        // Make sure ViewController is notified when the user picks an image
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @IBAction func goToNewsFeed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+        present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

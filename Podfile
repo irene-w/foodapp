@@ -14,6 +14,7 @@ target 'TasteBuds' do
   pod 'GoogleMaps'
   pod 'Alamofire', '~> 4.5'
   pod 'AlamofireImage', '~> 3.3'
-  pod 'OHMySQL'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end
