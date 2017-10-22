@@ -14,8 +14,11 @@
 		234B79BF1F9AE8B1003A92BA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234B79BE1F9AE8B1003A92BA /* Profile.storyboard */; };
 		234B79C11F9AE8D4003A92BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */; };
 		234B79C31F9BAD64003A92BA /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B79C21F9BAD64003A92BA /* CheckInViewController.swift */; };
-		234B79C71F9BCDBF003A92BA /* (null) in Sources */ = {isa = PBXBuildFile; };
-		234B79C91F9BD753003A92BA /* (null) in Resources */ = {isa = PBXBuildFile; };
+		234B79C71F9BCDBF003A92BA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		234B79C91F9BD753003A92BA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
+		237017951F9C2500009C3E73 /* CheckIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237017941F9C2500009C3E73 /* CheckIn.storyboard */; };
+		237017971F9C2566009C3E73 /* defaultPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 237017961F9C2566009C3E73 /* defaultPhoto.png */; };
+		2370179A1F9C266C009C3E73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237017991F9C263A009C3E73 /* GoogleService-Info.plist */; };
 		2397F3BF1F9BFDEB00AA8162 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2397F3BE1F9BFDEB00AA8162 /* User.swift */; };
 		37700C926B659B5DB9FC7CC5 /* Pods_TasteBuds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */; };
 		570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */; };
@@ -53,6 +56,9 @@
 		234B79BE1F9AE8B1003A92BA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = TasteBuds/Profile.storyboard; sourceTree = SOURCE_ROOT; };
 		234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = TasteBuds/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		234B79C21F9BAD64003A92BA /* CheckInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = TasteBuds/CheckInViewController.swift; sourceTree = SOURCE_ROOT; };
+		237017941F9C2500009C3E73 /* CheckIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CheckIn.storyboard; path = TasteBuds/CheckIn.storyboard; sourceTree = SOURCE_ROOT; };
+		237017961F9C2566009C3E73 /* defaultPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPhoto.png; sourceTree = "<group>"; };
+		237017991F9C263A009C3E73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2397F3BE1F9BFDEB00AA8162 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		237017981F9C25AC009C3E73 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				237017961F9C2566009C3E73 /* defaultPhoto.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		57304D281F9AD36800A8E56C = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +129,10 @@
 				57A9BDB01F9AE39B00D3B131 /* Login */,
 				57304D341F9AD36800A8E56C /* AppDelegate.swift */,
 				57304D3E1F9AD36800A8E56C /* Assets.xcassets */,
+				237017981F9C25AC009C3E73 /* Assets */,
 				57304D401F9AD36800A8E56C /* LaunchScreen.storyboard */,
 				57304D431F9AD36800A8E56C /* Info.plist */,
+				237017991F9C263A009C3E73 /* GoogleService-Info.plist */,
 				57304D3B1F9AD36800A8E56C /* TasteBuds.xcdatamodeld */,
 				2397F3BE1F9BFDEB00AA8162 /* User.swift */,
 			);
@@ -147,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				234B79BE1F9AE8B1003A92BA /* Profile.storyboard */,
+				237017941F9C2500009C3E73 /* CheckIn.storyboard */,
 				234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */,
 				234B79C21F9BAD64003A92BA /* CheckInViewController.swift */,
 			);
@@ -251,8 +268,11 @@
 				57304D421F9AD36800A8E56C /* LaunchScreen.storyboard in Resources */,
 				57304D3F1F9AD36800A8E56C /* Assets.xcassets in Resources */,
 				57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */,
+				237017971F9C2566009C3E73 /* defaultPhoto.png in Resources */,
 				57304D3A1F9AD36800A8E56C /* Main.storyboard in Resources */,
-				234B79C91F9BD753003A92BA /* (null) in Resources */,
+				234B79C91F9BD753003A92BA /* BuildFile in Resources */,
+				2370179A1F9C266C009C3E73 /* GoogleService-Info.plist in Resources */,
+				237017951F9C2500009C3E73 /* CheckIn.storyboard in Resources */,
 				57A9BDB71F9AE4A800D3B131 /* NewsFeed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +313,8 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/OHMySQL/OHMySQL.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -303,7 +324,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHMySQL.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -340,7 +362,7 @@
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
 				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
-				234B79C71F9BCDBF003A92BA /* (null) in Sources */,
+				234B79C71F9BCDBF003A92BA /* BuildFile in Sources */,
 				57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */,
 				57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */,
 				2397F3BF1F9BFDEB00AA8162 /* User.swift in Sources */,

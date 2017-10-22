@@ -46,7 +46,7 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>OHMySQL.xcscheme</key>
+		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -54,6 +54,13 @@
 			<integer>6</integer>
 		</dict>
 		<key>Pods-TasteBuds.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
