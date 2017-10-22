@@ -8,17 +8,19 @@
 
 import Foundation
 import Firebase
-//import FirebaseStorage
+import FirebaseStorage
 import FBSDKLoginKit
 import FirebaseAuth
 
 class BackEnd {
     static var ref: DatabaseReference!
     static var user: User!
-    
+    static var tasteBuds: [TasteBud] = []
+    static var newsFeedDelegate: NewsFeedViewController!
     static func initialize() {
         BackEnd.ref = Database.database().reference()
     }
+    
     static func login(fromViewController vc: UIViewController) {
         FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: vc) { (result, err) in
             if err != nil { print("FB login failed with error: ", err ?? ""); return }
@@ -63,6 +65,53 @@ class BackEnd {
     }
     
     private static func pullUserFromFirebase(_ snapshot: DataSnapshot) -> User {
+        let userInfo = snapshot.value as! [String: String]
+        let user = User(userInfo)
+        user.unique = snapshot.key
+        return user
+    }
+    
+    static func add(tasteBud: TasteBud) {
+        let autoID = BackEnd.ref.child("TasteBuds").childByAutoId().key
+        BackEnd.ref.child("TasteBuds/\(autoID)").setValue(tasteBud.info)
+        BackEnd.ref.child("TasteBuds by Users/\(tasteBud.user?.unique ?? "err")/TasteBuds/\(autoID)").setValue(tasteBud.info)
+        //tasteBud.unique = autoID
+    }
+    
+    static func uploadTasteBud(_ tasteBudInfo: [String:String], _ image: UIImage, delegate: CheckInViewController) {
+        guard let uid = Auth.auth().currentUser?.uid else {print("error uploading image, no uid");return}
+        let autoID = BackEnd.ref.child("TasteBuds").childByAutoId().key
+        let refStore = Storage.storage().reference().child("\(uid)/\("TasteBuds")/\(autoID).jpg")
+        let imageData = UIImageJPEGRepresentation(image, 0.1)
+        refStore.putData(imageData!, metadata: nil) { (meta, err) in
+            if err != nil {print("error uploading image data ", err ?? "");return}
+            //print(meta ?? "no meta")
+            let url = String(describing: (meta?.downloadURL())!)
+            var info = tasteBudInfo
+            info["FoodPicURL"] = url
+            BackEnd.ref.child("TasteBuds/\(autoID)").setValue(info)
+            BackEnd.ref.child("TasteBuds by Users/\(info["User"] ?? "err")/TasteBuds/\(autoID)").setValue(info)
+            delegate.goToNewsFeed()
+        }
+    }
+    
+    static func listenForTasteBuds() {
+        BackEnd.ref.child("TasteBuds").observe(.childAdded) { (snapShot) in
+            guard snapShot.exists() else { return }
+            let tasteBudID = snapShot.key
+            let tasteDetails = snapShot.value as! [String:String]
+            var tasteBud = TasteBud(tasteInfo: tasteDetails)
+            BackEnd.ref.child("Users/\(tasteDetails["User"] ?? "err")").observeSingleEvent(of: .value, with: { (snapShotUser) in
+                let user = pullUserFromFirebase(snapShotUser)
+                tasteBud.user = user
+                tasteBud.unique = tasteBudID
+                tasteBuds.insert(tasteBud, at: 0)
+                newsFeedDelegate.feedTableView.reloadData()
+            })
+        }
+    }
+    
+    private func pullUserFromFirebase(_ snapshot: DataSnapshot) -> User {
         let userInfo = snapshot.value as! [String: String]
         let user = User(userInfo)
         user.unique = snapshot.key

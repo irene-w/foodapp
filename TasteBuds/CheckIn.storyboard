@@ -62,9 +62,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnE-Ck-lNr">
                                 <rect key="frame" x="164" y="524" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done!"/>
+                                <state key="normal" title="Go"/>
                                 <connections>
-                                    <action selector="goToNewsFeed:" destination="Hch-VC-DCA" eventType="touchUpInside" id="aMW-jp-nfl"/>
+                                    <action selector="Go:" destination="Hch-VC-DCA" eventType="touchUpInside" id="sa6-jl-0Dp"/>
                                 </connections>
                             </button>
                         </subviews>

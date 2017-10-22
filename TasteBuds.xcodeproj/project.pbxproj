@@ -21,6 +21,8 @@
 		2370179A1F9C266C009C3E73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237017991F9C263A009C3E73 /* GoogleService-Info.plist */; };
 		2370179C1F9C2FC9009C3E73 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2370179B1F9C2FC9009C3E73 /* RatingControl.swift */; };
 		37700C926B659B5DB9FC7CC5 /* Pods_TasteBuds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */; };
+		5705CD621F9CAD5F00DA5387 /* ImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705CD611F9CAD5F00DA5387 /* ImageResize.swift */; };
+		5705CD661F9CC02100DA5387 /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5705CD651F9CC02100DA5387 /* TimeAgo.swift */; };
 		570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */; };
 		570907EE1F9C081A00EC6660 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570907ED1F9C081A00EC6660 /* MainTabBarViewController.swift */; };
 		57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57304D341F9AD36800A8E56C /* AppDelegate.swift */; };
@@ -29,7 +31,7 @@
 		57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57304D3B1F9AD36800A8E56C /* TasteBuds.xcdatamodeld */; };
 		57304D3F1F9AD36800A8E56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57304D3E1F9AD36800A8E56C /* Assets.xcassets */; };
 		57304D421F9AD36800A8E56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57304D401F9AD36800A8E56C /* LaunchScreen.storyboard */; };
-		578F4F3D1F9C170700D2EF46 /* NewsFeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F4F3C1F9C170700D2EF46 /* NewsFeedPost.swift */; };
+		578F4F3D1F9C170700D2EF46 /* TasteBud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F4F3C1F9C170700D2EF46 /* TasteBud.swift */; };
 		578F4F3F1F9C196700D2EF46 /* NavBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F4F3E1F9C196700D2EF46 /* NavBarExtension.swift */; };
 		57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */; };
 		57A9BDB71F9AE4A800D3B131 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */; };
@@ -37,6 +39,7 @@
 		57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */; };
 		57ED92291F9C47DC002501BD /* BackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED92281F9C47DC002501BD /* BackEnd.swift */; };
 		57ED922B1F9C4E5A002501BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED922A1F9C4E5A002501BD /* User.swift */; };
+		57ED922F1F9C874F002501BD /* GetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED922E1F9C874E002501BD /* GetLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +68,8 @@
 		237017961F9C2566009C3E73 /* defaultPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPhoto.png; sourceTree = "<group>"; };
 		237017991F9C263A009C3E73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2370179B1F9C2FC9009C3E73 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RatingControl.swift; path = TasteBuds/RatingControl.swift; sourceTree = SOURCE_ROOT; };
+		5705CD611F9CAD5F00DA5387 /* ImageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResize.swift; sourceTree = "<group>"; };
+		5705CD651F9CC02100DA5387 /* TimeAgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
 		570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		570907ED1F9C081A00EC6660 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		57304D311F9AD36800A8E56C /* TasteBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TasteBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +80,7 @@
 		57304D3E1F9AD36800A8E56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57304D411F9AD36800A8E56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57304D431F9AD36800A8E56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		578F4F3C1F9C170700D2EF46 /* NewsFeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedPost.swift; sourceTree = "<group>"; };
+		578F4F3C1F9C170700D2EF46 /* TasteBud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteBud.swift; sourceTree = "<group>"; };
 		578F4F3E1F9C196700D2EF46 /* NavBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarExtension.swift; sourceTree = "<group>"; };
 		57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
 		57ED92281F9C47DC002501BD /* BackEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEnd.swift; sourceTree = "<group>"; };
 		57ED922A1F9C4E5A002501BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		57ED922E1F9C874E002501BD /* GetLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
 		86F6BCD095B7EAF22413F24F /* Pods-TasteBuds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteBuds.release.xcconfig"; path = "Pods/Target Support Files/Pods-TasteBuds/Pods-TasteBuds.release.xcconfig"; sourceTree = "<group>"; };
 		8D3891B961E07B7C9F04816D /* Pods-TasteBuds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteBuds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TasteBuds/Pods-TasteBuds.debug.xcconfig"; sourceTree = "<group>"; };
 		D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TasteBuds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +142,8 @@
 				570907ED1F9C081A00EC6660 /* MainTabBarViewController.swift */,
 				57ED92281F9C47DC002501BD /* BackEnd.swift */,
 				578F4F3E1F9C196700D2EF46 /* NavBarExtension.swift */,
-				57ED922A1F9C4E5A002501BD /* User.swift */,
+				57ED922D1F9C8705002501BD /* Helpers */,
+				57ED922C1F9C7EC3002501BD /* Types */,
 				57A9BDB31F9AE43E00D3B131 /* Maps */,
 				57A9BDB21F9AE40800D3B131 /* Profile */,
 				57A9BDB11F9AE3E900D3B131 /* NewFeed */,
@@ -168,7 +175,6 @@
 				57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */,
 				57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */,
 				570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */,
-				578F4F3C1F9C170700D2EF46 /* NewsFeedPost.swift */,
 			);
 			path = NewFeed;
 			sourceTree = "<group>";
@@ -192,6 +198,25 @@
 				57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */,
 			);
 			path = Maps;
+			sourceTree = "<group>";
+		};
+		57ED922C1F9C7EC3002501BD /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				57ED922A1F9C4E5A002501BD /* User.swift */,
+				578F4F3C1F9C170700D2EF46 /* TasteBud.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		57ED922D1F9C8705002501BD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				57ED922E1F9C874E002501BD /* GetLocation.swift */,
+				5705CD651F9CC02100DA5387 /* TimeAgo.swift */,
+				5705CD611F9CAD5F00DA5387 /* ImageResize.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		60CFE451297A04274FCFE83A /* Frameworks */ = {
@@ -378,17 +403,20 @@
 			files = (
 				234B79C11F9AE8D4003A92BA /* ProfileViewController.swift in Sources */,
 				57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */,
+				5705CD661F9CC02100DA5387 /* TimeAgo.swift in Sources */,
 				570907EE1F9C081A00EC6660 /* MainTabBarViewController.swift in Sources */,
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
 				57ED92291F9C47DC002501BD /* BackEnd.swift in Sources */,
+				57ED922F1F9C874F002501BD /* GetLocation.swift in Sources */,
 				2370179C1F9C2FC9009C3E73 /* RatingControl.swift in Sources */,
-				578F4F3D1F9C170700D2EF46 /* NewsFeedPost.swift in Sources */,
+				578F4F3D1F9C170700D2EF46 /* TasteBud.swift in Sources */,
 				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
 				57ED922B1F9C4E5A002501BD /* User.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
 				234B79C71F9BCDBF003A92BA /* (null) in Sources */,
 				578F4F3F1F9C196700D2EF46 /* NavBarExtension.swift in Sources */,
 				57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */,
+				5705CD621F9CAD5F00DA5387 /* ImageResize.swift in Sources */,
 				57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */,
 				234B79C31F9BAD64003A92BA /* CheckInViewController.swift in Sources */,
 			);

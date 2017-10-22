@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 struct TasteBud {
-    let user: User!
-    let restaurant: String!
-    let date: Date!
-    let time: String!
-    let foodPicURL: String!
-    let foodPic: UIImage!
-    var likes = 0
-    var comments = 0
+    var user: User!
+    var info: [String: String] = [:]
+    var unique: String!
+    init (tasteInfo: [String:String]) {
+        //user =
+        unique = ""
+        info = tasteInfo
+    }
 }
