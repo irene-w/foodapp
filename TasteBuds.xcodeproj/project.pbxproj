@@ -35,6 +35,8 @@
 		57A9BDB71F9AE4A800D3B131 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */; };
 		57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9BDB91F9AE4C600D3B131 /* MapsViewController.swift */; };
 		57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */; };
+		57ED92291F9C47DC002501BD /* BackEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED92281F9C47DC002501BD /* BackEnd.swift */; };
+		57ED922B1F9C4E5A002501BD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ED922A1F9C4E5A002501BD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +81,8 @@
 		57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
 		57A9BDB91F9AE4C600D3B131 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		57A9BDBB1F9AE4D800D3B131 /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
+		57ED92281F9C47DC002501BD /* BackEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEnd.swift; sourceTree = "<group>"; };
+		57ED922A1F9C4E5A002501BD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		86F6BCD095B7EAF22413F24F /* Pods-TasteBuds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteBuds.release.xcconfig"; path = "Pods/Target Support Files/Pods-TasteBuds/Pods-TasteBuds.release.xcconfig"; sourceTree = "<group>"; };
 		8D3891B961E07B7C9F04816D /* Pods-TasteBuds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TasteBuds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TasteBuds/Pods-TasteBuds.debug.xcconfig"; sourceTree = "<group>"; };
 		D05DEBDD3A623948647371E7 /* Pods_TasteBuds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TasteBuds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				570907ED1F9C081A00EC6660 /* MainTabBarViewController.swift */,
+				57ED92281F9C47DC002501BD /* BackEnd.swift */,
 				578F4F3E1F9C196700D2EF46 /* NavBarExtension.swift */,
+				57ED922A1F9C4E5A002501BD /* User.swift */,
 				57A9BDB31F9AE43E00D3B131 /* Maps */,
 				57A9BDB21F9AE40800D3B131 /* Profile */,
 				57A9BDB11F9AE3E900D3B131 /* NewFeed */,
@@ -322,6 +328,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -334,6 +341,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -372,9 +380,11 @@
 				57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */,
 				570907EE1F9C081A00EC6660 /* MainTabBarViewController.swift in Sources */,
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
+				57ED92291F9C47DC002501BD /* BackEnd.swift in Sources */,
 				2370179C1F9C2FC9009C3E73 /* RatingControl.swift in Sources */,
 				578F4F3D1F9C170700D2EF46 /* NewsFeedPost.swift in Sources */,
 				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
+				57ED922B1F9C4E5A002501BD /* User.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
 				234B79C71F9BCDBF003A92BA /* (null) in Sources */,
 				578F4F3F1F9C196700D2EF46 /* NavBarExtension.swift in Sources */,
