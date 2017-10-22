@@ -8,10 +8,8 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
 
 class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
     
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var restaurantNameEntry: UITextField!
@@ -83,6 +81,32 @@ class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     }
     
     @IBAction func goToNewsFeed(_ sender: Any) {
+        // TODO: Get user UID
+        // guard let uid = Auth.auth().currentUser?.uid else {
+        //    print("Error: no user UID")
+        //    return
+        //}
+        
+        // Get Storage reference
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        //TODO: this will overwrite previous version of image. Use uid from above to fix
+        let ratingsRef = storageRef.child("Ratings/" + "/food.jpg")
+        
+        //Upload image
+        let imageData = UIImageJPEGRepresentation(foodPicture!.image!, 0.1)
+        let uploadTask = ratingsRef.putData(imageData!, metadata:nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                print("Error while uploading")
+                return
+            }
+            
+            //Download URL for image
+            let downloadURL = metadata.downloadURL
+        }
+        
+        //Go to news feed
         let vc = MainTabBarViewController()
         present(vc, animated: true, completion: nil)
     }
