@@ -87,9 +87,10 @@ class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         present(imagePickerController, animated: true, completion: nil)
     }
     
-<<<<<<< HEAD
     func goToNewsFeed() {
-=======
+        let vc = MainTabBarViewController()
+        present(vc, animated: true, completion: nil)
+/*
     @IBAction func goToNewsFeed(_ sender: Any) {
         // TODO: Get user UID
         // guard let uid = Auth.auth().currentUser?.uid else {
@@ -117,9 +118,7 @@ class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         }
         
         //Go to news feed
->>>>>>> 099828126573ad92566ca92bc1fd3eac11cffa3e
-        let vc = MainTabBarViewController()
-        present(vc, animated: true, completion: nil)
+*/
     }
 
     @IBAction func Go(_ sender: Any) {
