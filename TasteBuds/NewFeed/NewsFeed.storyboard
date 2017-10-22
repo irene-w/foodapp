@@ -35,9 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q9K-50-rpY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q9K-50-rpY">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsFeedPost" rowHeight="224" id="Evs-HM-SiB" customClass="NewsFeedTableViewCell" customModule="TasteBuds" customModuleProvider="target">
@@ -122,6 +121,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q9K-50-rpY" firstAttribute="top" secondItem="gVn-Hs-M0U" secondAttribute="top" id="Bl2-5A-haf"/>
+                            <constraint firstItem="Q9K-50-rpY" firstAttribute="leading" secondItem="gVn-Hs-M0U" secondAttribute="leading" id="Qvc-Uq-1qX"/>
+                            <constraint firstItem="Q9K-50-rpY" firstAttribute="trailing" secondItem="gVn-Hs-M0U" secondAttribute="trailing" id="urs-Xv-cwI"/>
+                            <constraint firstItem="Q9K-50-rpY" firstAttribute="bottom" secondItem="gVn-Hs-M0U" secondAttribute="bottom" id="xPA-3D-19b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gVn-Hs-M0U"/>
                     </view>
                     <navigationItem key="navigationItem" id="hLU-77-3EN"/>

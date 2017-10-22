@@ -8,12 +8,12 @@
 
 import UIKit
 
-class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsFeedViewController: NavBarExtension, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var feedTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationController?.title = "NewsFeed"
+        configureNavBar()
         feedTableView.dataSource = self
         feedTableView.delegate = self
         feedTableView.rowHeight = 236

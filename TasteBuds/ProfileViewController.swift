@@ -12,14 +12,14 @@ import FBSDKLoginKit
 import FBSDKShareKit
 import AlamofireImage
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: NavBarExtension {
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var userName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavBar()
         loadUI()
-
         // Do any additional setup after loading the view.
     }
     

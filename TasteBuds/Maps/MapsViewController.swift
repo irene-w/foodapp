@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MapsViewController: UIViewController {
+class MapsViewController: NavBarExtension {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureNavBar()
         // Do any additional setup after loading the view.
     }
 
