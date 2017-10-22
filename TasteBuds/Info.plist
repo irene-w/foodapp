@@ -47,6 +47,8 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>By accessing your location, we can show where your friends have been to eat.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>By accessing your location, we can show where your friends have been to eat.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
