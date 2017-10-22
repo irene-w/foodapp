@@ -45,6 +45,8 @@ class ProfileViewController: NavBarExtension {
                         if let imageData = NSData(contentsOf: url) {
                             DispatchQueue.main.async {
                                 self?.profilePicture.image = UIImage(data: imageData as Data)
+                                self?.profilePicture.layer.cornerRadius = (self?.profilePicture.frame.width)! / 2
+                                self?.profilePicture.layer.masksToBounds = true
                             }
                         }
                     }

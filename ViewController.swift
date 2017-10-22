@@ -8,22 +8,32 @@
 
 import UIKit
 import FBSDKLoginKit
+import FirebaseAuth
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ViewController: UIViewController {
     
+    @IBOutlet weak var login: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // If user already logged in, don't add the login button
-        let loginButton = FBSDKLoginButton()
-        loginButton.center = view.center
-        loginButton.delegate = self // Remember to set the delegate of the loginButton
-        view.addSubview(loginButton)
-
+        BackEnd.initialize()
+        configureButton()
     }
-
+    
+    func configureButton() {
+        //login.layer.borderWidth = 3
+        login.layer.borderColor = UIColor.white.cgColor
+        login.layer.cornerRadius = 15
+        login.clipsToBounds = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        super.viewDidAppear(animated)
+        guard let firebaseID = Auth.auth().currentUser?.uid else {return}
+        guard let facebookID = FBSDKAccessToken.current()?.tokenString else {return}
+        //User is already signed in
+        print(firebaseID,facebookID)
+        BackEnd.checkIfUserExists()
         if (FBSDKAccessToken.current()) != nil {
             //Go to News Feed
             let vc = MainTabBarViewController()
@@ -31,6 +41,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
+    @IBAction func loginAction(_ sender: Any) {
+        BackEnd.login(fromViewController: self)
+    }
+    
+    
+    /*
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
@@ -40,9 +56,5 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         // Actions for when the user logged out goes here
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+*/
 }

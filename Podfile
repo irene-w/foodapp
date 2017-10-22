@@ -6,7 +6,7 @@ target 'TasteBuds' do
   use_frameworks!
 
   # Pods for TasteBuds
-  pod 'FBSDKCoreKit'
+  pod 'FBSDKCoreKit's
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'GooglePlaces'
@@ -17,5 +17,6 @@ target 'TasteBuds' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
 
 end

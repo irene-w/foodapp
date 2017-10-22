@@ -9,13 +9,11 @@
 import Foundation
 import UIKit
 
-struct NewsFeedPost {
-    let name: String!
+struct TasteBud {
+    let user: User!
     let restaurant: String!
     let date: Date!
     let time: String!
-    let profilePicURL: String!
-    let profilePic: UIImage!
     let foodPicURL: String!
     let foodPic: UIImage!
     var likes = 0

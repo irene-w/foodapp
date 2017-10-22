@@ -6,6 +6,10 @@ mkdir -p "${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
 SWIFT_STDLIB_PATH="${DT_TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}"
 
+# This protects against multiple targets copying the same framework dependency at the same time. The solution
+# was originally proposed here: https://lists.samba.org/archive/rsync/2008-February/020158.html
+RSYNC_PROTECT_TMP_FILES=(--filter "P .*.??????")
+
 install_framework()
 {
   if [ -r "${BUILT_PRODUCTS_DIR}/$1" ]; then
@@ -89,28 +93,28 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FBSDKCoreKit/FBSDKCoreKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FBSDKLoginKit/FBSDKLoginKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FBSDKShareKit/FBSDKShareKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/leveldb-library/leveldb.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/nanopb/nanopb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/AlamofireImage/AlamofireImage.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FBSDKCoreKit/FBSDKCoreKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FBSDKLoginKit/FBSDKLoginKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FBSDKShareKit/FBSDKShareKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/leveldb-library/leveldb.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/nanopb/nanopb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
