@@ -12,6 +12,7 @@ import FBSDKCoreKit
 import GooglePlaces
 import GoogleMaps
 import GooglePlacePicker
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GMSPlacesClient.provideAPIKey("AIzaSyBON8odrfJITwM47-G3QvyF5xHtk-6lcyE")
         GMSServices.provideAPIKey("AIzaSyBON8odrfJITwM47-G3QvyF5xHtk-6lcyE")
+        FirebaseApp.configure()
 
         return true
     }
