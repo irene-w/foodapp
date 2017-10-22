@@ -11,6 +11,8 @@ import GoogleMaps
 
 class MapsViewController: NavBarExtension {
     
+    var latitude: String!
+    var longitude: String!
     var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -39,12 +41,13 @@ class MapsViewController: NavBarExtension {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
         
+        /*
         addMarker(title: "Shake Shack", iconName: "Icon Map 1", latitude: 42.3700435, longitude: -71.11643240000001)
         addMarker(title: "Tasty Burger", iconName: "Icon Map 2", latitude: 42.3725821, longitude: -71.1198316)
         addMarker(title: "Tatte bakery", iconName: "Icon Map 3", latitude: 42.3726897, longitude: -71.11694369999998)
         addMarker(title: "Cafe Sushi", iconName: "Icon Map 4", latitude: 42.3707266, longitude: -71.1133979)
         addMarker(title: "Flour Bakery", iconName: "Icon Map 5", latitude: 42.3609453, longitude: -71.09666090000002)
-        
+        */
         // Add the map to the view, hide it until we've got a location update.
         
         view.addSubview(mapView)
@@ -54,6 +57,32 @@ class MapsViewController: NavBarExtension {
         //mapView.frame.size.height = mapView.frame.size.height - 20
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        mapView.clear()
+        for tasteBud in BackEnd.tasteBuds {
+            createMarkers(tasteBud)
+        }
+    }
+    
+    func createMarkers(_ tasteBud: TasteBud) {
+        setLatitudeLongitude(tasteBud.info["Location"]!)
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!)
+        marker.title = tasteBud.info["Name"]
+        marker.snippet = tasteBud.info["Restaurant"]!
+        marker.map = mapView
+    }
+    
+    func setLatitudeLongitude(_ location: String) {
+        var indexOfComma = location.startIndex
+        while (indexOfComma != location.endIndex) {
+            if location[indexOfComma] == "," {break}
+            indexOfComma = location.index(after: indexOfComma)
+        }
+        latitude = location.substring(to: location.index(before: indexOfComma))
+        longitude = location.substring(from: location.index(after: indexOfComma))
+    }
+    /*
     func addMarker(title: String, iconName: String, latitude: Double, longitude: Double) {
         let position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let marker = GMSMarker(position: position)
@@ -61,6 +90,7 @@ class MapsViewController: NavBarExtension {
         marker.icon = UIImage(named: iconName)
         marker.map = mapView
     }
+    */
 
 }
 
