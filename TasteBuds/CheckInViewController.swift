@@ -87,7 +87,37 @@ class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         present(imagePickerController, animated: true, completion: nil)
     }
     
+<<<<<<< HEAD
     func goToNewsFeed() {
+=======
+    @IBAction func goToNewsFeed(_ sender: Any) {
+        // TODO: Get user UID
+        // guard let uid = Auth.auth().currentUser?.uid else {
+        //    print("Error: no user UID")
+        //    return
+        //}
+        
+        // Get Storage reference
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        
+        //TODO: this will overwrite previous version of image. Use uid from above to fix
+        let ratingsRef = storageRef.child("Ratings/" + "/food.jpg")
+        
+        //Upload image
+        let imageData = UIImageJPEGRepresentation(foodPicture!.image!, 0.1)
+        let uploadTask = ratingsRef.putData(imageData!, metadata:nil) { (metadata, error) in
+            guard let metadata = metadata else {
+                print("Error while uploading")
+                return
+            }
+            
+            //Download URL for image
+            let downloadURL = metadata.downloadURL
+        }
+        
+        //Go to news feed
+>>>>>>> 099828126573ad92566ca92bc1fd3eac11cffa3e
         let vc = MainTabBarViewController()
         present(vc, animated: true, completion: nil)
     }

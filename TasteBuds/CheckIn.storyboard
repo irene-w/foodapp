@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="egE-Yj-ZBH">
-                                <rect key="frame" x="10" y="40" width="366" height="444.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="egE-Yj-ZBH">
+                                <rect key="frame" x="10" y="40" width="355" height="444.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lly-Rm-gFf">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
@@ -43,8 +43,8 @@
                                             <outletCollection property="gestureRecognizers" destination="Vi0-in-e0O" appends="YES" id="KHB-F6-HlV"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="msK-3R-fvP" customClass="RatingControl" customModule="TasteBuds" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="394.5" width="366" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="msK-3R-fvP" customClass="RatingControl" customModule="TasteBuds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="394.5" width="355" height="50"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="buttonCount">
                                                 <integer key="value" value="3"/>

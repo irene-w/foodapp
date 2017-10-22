@@ -30,11 +30,11 @@
             <objects>
                 <viewController id="b5m-ez-ICW" customClass="MapsViewController" customModule="TasteBuds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CdD-oz-c2z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUU-vn-9jO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -47,6 +47,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RET-TP-XDh"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="4ZG-92-pcF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcy-UL-oPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
