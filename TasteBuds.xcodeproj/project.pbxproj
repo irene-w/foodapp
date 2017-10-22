@@ -26,6 +26,7 @@
 		57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57304D3B1F9AD36800A8E56C /* TasteBuds.xcdatamodeld */; };
 		57304D3F1F9AD36800A8E56C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57304D3E1F9AD36800A8E56C /* Assets.xcassets */; };
 		57304D421F9AD36800A8E56C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57304D401F9AD36800A8E56C /* LaunchScreen.storyboard */; };
+		578F4F3D1F9C170700D2EF46 /* NewsFeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F4F3C1F9C170700D2EF46 /* NewsFeedPost.swift */; };
 		57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */; };
 		57A9BDB71F9AE4A800D3B131 /* NewsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */; };
 		57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A9BDB91F9AE4C600D3B131 /* MapsViewController.swift */; };
@@ -65,6 +66,7 @@
 		57304D3E1F9AD36800A8E56C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57304D411F9AD36800A8E56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57304D431F9AD36800A8E56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		578F4F3C1F9C170700D2EF46 /* NewsFeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedPost.swift; sourceTree = "<group>"; };
 		57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsFeed.storyboard; sourceTree = "<group>"; };
 		57A9BDB91F9AE4C600D3B131 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				57A9BDB41F9AE48B00D3B131 /* NewsFeedViewController.swift */,
 				57A9BDB61F9AE4A800D3B131 /* NewsFeed.storyboard */,
 				570907EB1F9AF42000EC6660 /* NewsFeedTableViewCell.swift */,
+				578F4F3C1F9C170700D2EF46 /* NewsFeedPost.swift */,
 			);
 			path = NewFeed;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				57A9BDBA1F9AE4C600D3B131 /* MapsViewController.swift in Sources */,
 				570907EE1F9C081A00EC6660 /* MainTabBarViewController.swift in Sources */,
 				57304D371F9AD36800A8E56C /* ViewController.swift in Sources */,
+				578F4F3D1F9C170700D2EF46 /* NewsFeedPost.swift in Sources */,
 				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
 				234B79C71F9BCDBF003A92BA /* (null) in Sources */,
