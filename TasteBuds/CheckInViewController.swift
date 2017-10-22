@@ -82,7 +82,12 @@ class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         present(imagePickerController, animated: true, completion: nil)
     }
     
-
+    @IBAction func goToNewsFeed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+        present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
