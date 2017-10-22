@@ -15,28 +15,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         // If user already logged in, don't add the login button
-        if (FBSDKAccessToken.current()) != nil {
-            //go to next view controller (news feed)
-            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
-            present(vc, animated: true, completion: nil)
-        }
-        
         let loginButton = FBSDKLoginButton()
         loginButton.center = view.center
         loginButton.delegate = self // Remember to set the delegate of the loginButton
         view.addSubview(loginButton)
+
     }
 
-    /*override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if (FBSDKAccessToken.current()) != nil {
-            //go to next view controller (news feed)
-            let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+            //Go to News Feed
+            let vc = MainTabBarViewController()
             present(vc, animated: true, completion: nil)
         }
-    }*/
+    }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         let storyboard = UIStoryboard(name: "Profile", bundle: nil)

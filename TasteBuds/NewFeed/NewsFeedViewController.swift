@@ -13,11 +13,18 @@ class NewsFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "NewsFeed"
-        // Do any additional setup after loading the view.
+        //navigationController?.title = "NewsFeed"
+        feedTableView.dataSource = self
+        feedTableView.delegate = self
+        feedTableView.rowHeight = 236
+        feedTableView.tableFooterView = UIView()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     

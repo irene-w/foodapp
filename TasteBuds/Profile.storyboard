@@ -12,7 +12,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Ym8-at-4gi">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="0AZ-uZ-Feu" customClass="ProfileViewController" customModule="TasteBuds" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0AZ-uZ-Feu" customClass="ProfileViewController" customModule="TasteBuds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t66-a5-AoJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,13 +33,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xie-5n-3JS">
-                                <rect key="frame" x="16" y="61" width="121" height="120"/>
+                                <rect key="frame" x="16" y="92" width="121" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="eiO-GQ-eou"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rap-u0-j8F"/>
                     <connections>
                         <outlet property="profilePicture" destination="xie-5n-3JS" id="rc6-Ox-tRo"/>
                         <outlet property="userName" destination="Nvo-gE-JTz" id="Adk-30-RAy"/>
@@ -47,7 +48,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2p-Cq-ScA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258.39999999999998" y="-137.18140929535232"/>
+            <point key="canvasLocation" x="-120" y="-138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="if8-Gv-4vP">
+            <objects>
+                <navigationController storyboardIdentifier="Profile" automaticallyAdjustsScrollViewInsets="NO" id="hcS-TQ-ZmL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f7j-29-1h2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0AZ-uZ-Feu" kind="relationship" relationship="rootViewController" id="YaJ-JB-hRx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zzd-UN-Svc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-662" y="-137"/>
         </scene>
     </scenes>
 </document>
