@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         BackEnd.initialize()
         configureButton()
+        let bg = UIImageView(image: #imageLiteral(resourceName: "LoginBackground"))
+        view.addSubview(bg)
+        view.sendSubview(toBack: bg)
     }
     
     func configureButton() {
