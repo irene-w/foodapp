@@ -12,6 +12,13 @@ class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBar.isTranslucent = false
+        
+        self.navigationController?.view.backgroundColor = UIColor.white
+        self.tabBar.barTintColor = UIColor.white
+        self.tabBar.backgroundColor = UIColor.white
+        
         let mapsVC = UIStoryboard(name: "Maps", bundle: nil).instantiateViewController(withIdentifier: "Maps")
         mapsVC.tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "pin"), tag: 0)
         mapsVC.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)

@@ -19,7 +19,7 @@ class MapsViewController: NavBarExtension {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.edgesForExtendedLayout = []
+        //self.edgesForExtendedLayout = []
         
         configureNavBar()
         
