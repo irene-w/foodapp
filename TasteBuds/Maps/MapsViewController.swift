@@ -43,7 +43,7 @@ class MapsViewController: NavBarExtension {
         
         view.addSubview(mapView)
         mapView.isHidden = true
-        
+        //mapView.frame.size.height = mapView.frame.size.height - 20
     }
 
     override func didReceiveMemoryWarning() {
