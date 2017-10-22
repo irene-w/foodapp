@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Check In View Controller-->
         <scene sceneID="7ve-3U-2OD">
             <objects>
-                <viewController storyboardIdentifier="CheckIn" id="Hch-VC-DCA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckIn" id="Hch-VC-DCA" customClass="CheckInViewController" customModule="TasteBuds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6fW-wi-d3f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UQh-lT-nlT" secondAttribute="height" multiplier="1:1" id="Wst-PP-2ff"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Vi0-in-e0O" appends="YES" id="KHB-F6-HlV"/>
+                                        </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e0x-lI-l4c" customClass="RatingControl" customModule="TasteBuds" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="395" width="252" height="50"/>
@@ -59,8 +62,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AzC-No-JVc"/>
                     </view>
+                    <connections>
+                        <outlet property="foodPicture" destination="UQh-lT-nlT" id="Ceg-y2-ldZ"/>
+                        <outlet property="restaurantName" destination="Lly-Rm-gFf" id="CZr-rX-cWl"/>
+                        <outlet property="restaurantNameEntry" destination="rTC-oW-FUZ" id="xJm-IF-QMY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsp-b4-7Am" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Vi0-in-e0O">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="Hch-VC-DCA" id="CaG-eW-wTx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="25" y="-51"/>
         </scene>
