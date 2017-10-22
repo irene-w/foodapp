@@ -6,7 +6,7 @@ target 'TasteBuds' do
   use_frameworks!
 
   # Pods for TasteBuds
-  pod 'FBSDKCoreKit's
+  pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
   pod 'GooglePlaces'
