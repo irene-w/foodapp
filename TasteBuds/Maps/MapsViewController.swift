@@ -11,6 +11,8 @@ import GoogleMaps
 
 class MapsViewController: NavBarExtension {
     
+    var latitude: String!
+    var longitude: String!
     var mapView: GMSMapView!
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
@@ -44,6 +46,32 @@ class MapsViewController: NavBarExtension {
         view.addSubview(mapView)
         mapView.isHidden = true
         //mapView.frame.size.height = mapView.frame.size.height - 20
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        mapView.clear()
+        for tasteBud in BackEnd.tasteBuds {
+            createMarkers(tasteBud)
+        }
+    }
+    
+    func createMarkers(_ tasteBud: TasteBud) {
+        setLatitudeLongitude(tasteBud.info["Location"]!)
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: Double(latitude)!, longitude: Double(longitude)!)
+        marker.title = tasteBud.info["Name"]
+        marker.snippet = tasteBud.info["Restaurant"]!
+        marker.map = mapView
+    }
+    
+    func setLatitudeLongitude(_ location: String) {
+        var indexOfComma = location.startIndex
+        while (indexOfComma != location.endIndex) {
+            if location[indexOfComma] == "," {break}
+            indexOfComma = location.index(after: indexOfComma)
+        }
+        latitude = location.substring(to: location.index(before: indexOfComma))
+        longitude = location.substring(from: location.index(after: indexOfComma))
     }
 
 }
