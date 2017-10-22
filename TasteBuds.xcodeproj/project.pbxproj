@@ -14,8 +14,8 @@
 		234B79BF1F9AE8B1003A92BA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 234B79BE1F9AE8B1003A92BA /* Profile.storyboard */; };
 		234B79C11F9AE8D4003A92BA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B79C01F9AE8D4003A92BA /* ProfileViewController.swift */; };
 		234B79C31F9BAD64003A92BA /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B79C21F9BAD64003A92BA /* CheckInViewController.swift */; };
-		234B79C71F9BCDBF003A92BA /* (null) in Sources */ = {isa = PBXBuildFile; };
-		234B79C91F9BD753003A92BA /* (null) in Resources */ = {isa = PBXBuildFile; };
+		234B79C71F9BCDBF003A92BA /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		234B79C91F9BD753003A92BA /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		237017951F9C2500009C3E73 /* CheckIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237017941F9C2500009C3E73 /* CheckIn.storyboard */; };
 		237017971F9C2566009C3E73 /* defaultPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 237017961F9C2566009C3E73 /* defaultPhoto.png */; };
 		2370179A1F9C266C009C3E73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 237017991F9C263A009C3E73 /* GoogleService-Info.plist */; };
@@ -273,7 +273,7 @@
 				57A9BDBC1F9AE4D800D3B131 /* Maps.storyboard in Resources */,
 				237017971F9C2566009C3E73 /* defaultPhoto.png in Resources */,
 				57304D3A1F9AD36800A8E56C /* Main.storyboard in Resources */,
-				234B79C91F9BD753003A92BA /* (null) in Resources */,
+				234B79C91F9BD753003A92BA /* BuildFile in Resources */,
 				2370179A1F9C266C009C3E73 /* GoogleService-Info.plist in Resources */,
 				237017951F9C2500009C3E73 /* CheckIn.storyboard in Resources */,
 				57A9BDB71F9AE4A800D3B131 /* NewsFeed.storyboard in Resources */,
@@ -317,6 +317,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -328,6 +329,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +369,7 @@
 				578F4F3D1F9C170700D2EF46 /* NewsFeedPost.swift in Sources */,
 				570907EC1F9AF42000EC6660 /* NewsFeedTableViewCell.swift in Sources */,
 				57304D351F9AD36800A8E56C /* AppDelegate.swift in Sources */,
-				234B79C71F9BCDBF003A92BA /* (null) in Sources */,
+				234B79C71F9BCDBF003A92BA /* BuildFile in Sources */,
 				57304D3D1F9AD36800A8E56C /* TasteBuds.xcdatamodeld in Sources */,
 				57A9BDB51F9AE48B00D3B131 /* NewsFeedViewController.swift in Sources */,
 				234B79C31F9BAD64003A92BA /* CheckInViewController.swift in Sources */,

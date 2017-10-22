@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return FBSDKApplicationDelegate.sharedInstance().application(application, open: open as URL!, sourceApplication: sourceApplication as String!, annotation: annotation)
   }
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         GMSPlacesClient.provideAPIKey("AIzaSyBON8odrfJITwM47-G3QvyF5xHtk-6lcyE")
