@@ -83,8 +83,7 @@ class CheckInViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     }
     
     @IBAction func goToNewsFeed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Profile")
+        let vc = MainTabBarViewController()
         present(vc, animated: true, completion: nil)
     }
     

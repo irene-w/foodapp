@@ -17,27 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvo-gE-JTz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvo-gE-JTz">
                                 <rect key="frame" x="156" y="92" width="150" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EHc-TX-cup"/>
+                                    <constraint firstAttribute="width" constant="150" id="Mac-j7-hG1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xie-5n-3JS">
-                                <rect key="frame" x="16" y="92" width="121" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xie-5n-3JS">
+                                <rect key="frame" x="16" y="69" width="121" height="143"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qoj-rW-e9h">
-                                <rect key="frame" x="284" y="87" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Check In"/>
-                                <connections>
-                                    <action selector="addEntry:" destination="0AZ-uZ-Feu" eventType="touchUpInside" id="crG-Qi-KLT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xie-5n-3JS" firstAttribute="top" secondItem="eiO-GQ-eou" secondAttribute="top" constant="5" id="0NK-KO-oKe"/>
+                            <constraint firstItem="eiO-GQ-eou" firstAttribute="trailing" secondItem="Nvo-gE-JTz" secondAttribute="trailing" constant="69" id="7BF-70-53J"/>
+                            <constraint firstItem="Nvo-gE-JTz" firstAttribute="leading" secondItem="xie-5n-3JS" secondAttribute="trailing" constant="19" id="8AC-Iy-Wof"/>
+                            <constraint firstItem="Nvo-gE-JTz" firstAttribute="top" secondItem="eiO-GQ-eou" secondAttribute="top" constant="28" id="Egf-vW-CsL"/>
+                            <constraint firstItem="Nvo-gE-JTz" firstAttribute="leading" secondItem="xie-5n-3JS" secondAttribute="trailing" constant="19" id="PNA-cB-cXm"/>
+                            <constraint firstItem="eiO-GQ-eou" firstAttribute="bottom" secondItem="xie-5n-3JS" secondAttribute="bottom" constant="455" id="Sjv-4m-0Dk"/>
+                            <constraint firstItem="xie-5n-3JS" firstAttribute="leading" secondItem="eiO-GQ-eou" secondAttribute="leading" constant="16" id="i8z-cG-83E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eiO-GQ-eou"/>
                     </view>
                     <navigationItem key="navigationItem" id="rap-u0-j8F"/>
@@ -66,7 +69,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zzd-UN-Svc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-662" y="-137"/>
+            <point key="canvasLocation" x="-863" y="-138"/>
         </scene>
     </scenes>
 </document>
