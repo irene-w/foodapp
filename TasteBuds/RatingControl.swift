@@ -17,7 +17,7 @@ import UIKit
             updateButtonSelectionStates()
         }
     }
-    @IBInspectable var buttonSize: CGSize = CGSize(width: 44.0, height: 44.0) {
+    @IBInspectable var buttonSize: CGSize = CGSize(width: 130.0, height: 50.0) {
         didSet {
             setupButtons()
         }
@@ -54,9 +54,9 @@ import UIKit
         let kindaWorth = UIImage(named: "kindaWorthIt", in: bundle, compatibleWith: self.traitCollection)
         let notWorth = UIImage(named: "notWorthIt", in: bundle, compatibleWith: self.traitCollection)
         
-        addButton(image: totallyWorth)
-        addButton(image: kindaWorth)
-        addButton(image: notWorth)
+        addButton(image: notWorth!)
+        addButton(image: kindaWorth!)
+        addButton(image: totallyWorth!)
         
         updateButtonSelectionStates()
     }
@@ -83,6 +83,7 @@ import UIKit
         ratingButtons.append(button)
     }
     
+    // Set the rating: 1 for not worth it, 2 kinda worth, 3 worth it
     @objc func ratingButtonTapped(button: UIButton) {
         guard let index = ratingButtons.index(of: button) else {
             fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
@@ -105,31 +106,9 @@ import UIKit
     private func updateButtonSelectionStates() {
         for (index, button) in ratingButtons.enumerated() {
             
-            // If the index of a button is less than the rating, that button should be selected.
-            button.isSelected = index < rating
+            // If the index of a button is not equal to the rating, set to unselected
+            button.isSelected = (index == rating)
             
-            // Set the hint string for the currently selected star
-            let hintString: String?
-            if rating == index + 1 {
-                hintString = "Tap to reset the rating to zero."
-            } else {
-                hintString = nil
-            }
-            
-            // Calculate the value string
-            let valueString: String
-            switch (rating) {
-            case 0:
-                valueString = "No rating set."
-            case 1:
-                valueString = "1 star set."
-            default:
-                valueString = "\(rating) stars set."
-            }
-            
-            // Assign the hint string and the value string
-            button.accessibilityHint = hintString
-            button.accessibilityValue = valueString
         }
     }
 

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="egE-Yj-ZBH">
-                                <rect key="frame" x="10" y="40" width="355" height="445"/>
+                                <rect key="frame" x="10" y="40" width="366" height="444.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lly-Rm-gFf">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="20.5"/>
@@ -28,13 +28,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter restaurant name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTC-oW-FUZ">
-                                        <rect key="frame" x="0.0" y="28.5" width="355" height="30.5"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="197" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="642" id="Ml4-3D-C4g"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="UQh-lT-nlT">
-                                        <rect key="frame" x="0.0" y="67" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="66.5" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UQh-lT-nlT" secondAttribute="height" multiplier="1:1" id="Wst-PP-2ff"/>
@@ -43,22 +46,25 @@
                                             <outletCollection property="gestureRecognizers" destination="Vi0-in-e0O" appends="YES" id="KHB-F6-HlV"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e0x-lI-l4c" customClass="RatingControl" customModule="TasteBuds" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="395" width="252" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="-12" translatesAutoresizingMaskIntoConstraints="NO" id="msK-3R-fvP" customClass="RatingControl" customModule="TasteBuds" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="394.5" width="366" height="50"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="buttonCount">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="buttonSize">
+                                                <size key="value" width="130" height="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rTC-oW-FUZ" secondAttribute="trailing" id="3u7-HC-mYo"/>
-                                    <constraint firstAttribute="trailing" secondItem="e0x-lI-l4c" secondAttribute="trailing" constant="103" id="eua-zc-t25"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AzC-No-JVc" firstAttribute="bottom" secondItem="egE-Yj-ZBH" secondAttribute="bottom" constant="182" id="UiE-51-v5R"/>
-                            <constraint firstAttribute="trailing" secondItem="egE-Yj-ZBH" secondAttribute="trailing" constant="10" id="qYG-MF-h4Q"/>
-                            <constraint firstItem="egE-Yj-ZBH" firstAttribute="top" secondItem="AzC-No-JVc" secondAttribute="top" constant="20" id="wbZ-iC-iyi"/>
-                            <constraint firstItem="egE-Yj-ZBH" firstAttribute="leading" secondItem="6fW-wi-d3f" secondAttribute="leading" constant="10" id="wyL-Ka-bpK"/>
+                            <constraint firstItem="egE-Yj-ZBH" firstAttribute="top" secondItem="AzC-No-JVc" secondAttribute="top" constant="20" id="Mvy-ZA-acV"/>
+                            <constraint firstItem="AzC-No-JVc" firstAttribute="trailing" secondItem="egE-Yj-ZBH" secondAttribute="trailing" constant="10" id="UFc-5K-Lzm"/>
+                            <constraint firstItem="egE-Yj-ZBH" firstAttribute="leading" secondItem="AzC-No-JVc" secondAttribute="leading" constant="10" id="iU6-PQ-cnT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AzC-No-JVc"/>
                     </view>
@@ -75,7 +81,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="25" y="-51"/>
+            <point key="canvasLocation" x="24.800000000000001" y="-51.724137931034484"/>
         </scene>
     </scenes>
     <resources>
